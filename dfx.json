@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "vote_backend": {
+      "build": "npx azle vote_backend",
+      "candid": "src/vote_backend/vote_backend.did",
+      "gzip": true,
+      "main": "src/vote_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/vote_backend/vote_backend.wasm"
+    },
+    "vote_frontend": {
+      "dependencies": [
+        "vote_backend"
+      ],
+      "source": [
+        "src/vote_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "vote_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
