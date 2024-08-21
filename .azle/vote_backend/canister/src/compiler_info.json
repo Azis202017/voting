@@ -1,0 +1,1 @@
+{"canister_methods":{"queries":[{"name":"getVotes","composite":false}],"updates":[{"name":"vote"}],"callbacks":{}}}

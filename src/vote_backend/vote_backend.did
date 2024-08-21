@@ -1,3 +1,4 @@
-service : {
-    "greet" : (text) -> (text) query;
+service: () -> {
+    getVotes: () -> (record {candidateA:nat; candidateB:nat}) query;
+    vote: (text) -> (text);
 }
